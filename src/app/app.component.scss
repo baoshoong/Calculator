@@ -1,0 +1,117 @@
+#container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: #000;
+}
+
+h1 {
+  color: #fff;
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+// container theme light, h1 se mau den
+#container.light h1 {
+  color: #000;
+}
+
+
+.display {
+  width: 40%;
+  background-color: #333;
+  color: #fff;
+  text-align: left;
+  padding: 20px;
+  font-size: 2.5em;
+  border: none;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.calculator {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  display: flex;
+  justify-content: center;
+}
+
+#Number {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+#Math {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  margin-left: 10px;
+}
+
+button {
+  background-color: #505050;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  padding: 20px;
+  font-size: 2em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: #606060;
+  }
+
+  &:active {
+    background-color: #707070;
+  }
+}
+
+#container.dark {
+  background-color: #000;
+}
+
+#container.dark .display {
+  background-color: #333;
+  color: #fff;
+}
+
+#container.dark button {
+  background-color: #505050;
+  color: #fff;
+}
+
+#container.dark button:hover {
+  background-color: #606060;
+}
+
+#container.dark button:active {
+  background-color: #707070;
+}
+
+#container.light {
+  background-color: #fff;
+}
+
+#container.light .display {
+  background-color: #ccc;
+  color: #000;
+}
+
+#container.light button {
+  background-color: #e0e0e0;
+  color: #000;
+}
+
+#container.light button:hover {
+  background-color: #d0d0d0;
+}
+
+#container.light button:active {
+  background-color: #c0c0c0;
+}

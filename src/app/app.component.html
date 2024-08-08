@@ -1,0 +1,22 @@
+<div id="container" [ngClass]="theme" >
+  <h1>{{ title }}</h1>
+  <button (click)="toggleTheme()"></button>
+  <div class="display">{{ displayValue }}</div>
+  <div class="calculator">
+    <div id="Number">
+      <button (click)="onClearClick()">C</button>
+      <button (click)="onPlusMinusClick()">+/-</button>
+      <button (click)="onPercentClick()">%</button>
+      <button *ngFor="let number of numbers" (click)="onNumberClick(number)">{{ number }}</button>
+      <button (click)="onDoubleZeroClick()">00</button>
+      <button (click)="onDotClick()">.</button>
+    </div>
+    <div id="Math">
+      <button (click)="onOperatorClick('+')">+</button>
+      <button (click)="onOperatorClick('-')">-</button>
+      <button (click)="onOperatorClick('*')">x</button>
+      <button (click)="onOperatorClick('/')">:</button>
+      <button (click)="onEqualsClick()">=</button>
+    </div>
+  </div>
+</div>
